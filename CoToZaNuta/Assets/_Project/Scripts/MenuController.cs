@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
@@ -14,7 +15,6 @@ public class MenuController : MonoBehaviour
 
     private void Start()
     {
-        playButton.gameObject.SetActive(false);
         InitPlayButton();
     }
 
