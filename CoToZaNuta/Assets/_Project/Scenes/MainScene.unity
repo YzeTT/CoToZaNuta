@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logo: {fileID: 2284029}
-  playButton: {fileID: 1869797832}
+  playButton: {fileID: 0}
   categoryPanel: {fileID: 665376193}
 --- !u!4 &354036739
 Transform:
@@ -2419,18 +2419,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1868455071}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1869797832 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4115289952410231827, guid: 02167d84f7562264cbc0bc5bd7661692,
-    type: 3}
-  m_PrefabInstance: {fileID: 1706500707681353395}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1704a06cb9fb3545accfaae3e3f0a1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1920759107
 GameObject:
   m_ObjectHideFlags: 0
