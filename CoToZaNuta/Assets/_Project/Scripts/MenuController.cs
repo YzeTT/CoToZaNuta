@@ -14,7 +14,6 @@ public class MenuController : MonoBehaviour
 
     private void Start()
     {
-        int itShouldShowError = -1.5;
         InitPlayButton();
     }
 
