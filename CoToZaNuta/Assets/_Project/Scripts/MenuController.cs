@@ -14,7 +14,7 @@ public class MenuController : MonoBehaviour
 
     private void Start()
     {
-        playButton.gameObject.SetActive(true);
+        int itShouldShowError = -1.5;
         InitPlayButton();
     }
 
