@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using UnityEditor;
 using UnityEngine;
 
 public class MenuController : MonoBehaviour
@@ -24,7 +25,7 @@ public class MenuController : MonoBehaviour
         await Task.Delay(40);
         EnableCategoryPanel();
     }
-
+    
     private void EnableCategoryPanel()
     {
         categoryPanel.SetActive(true);
