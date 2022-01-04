@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f36a25b81042eb9409ec606a1bc14801, type: 3}
+  m_Name: HipHop
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: f3eded2d2388874459742fcdf6f21d1b, type: 3}
+  - {fileID: 8300000, guid: ae735226eeddffa4da9880ce95935d6d, type: 3}
+  - {fileID: 8300000, guid: e08cc84c6d6a7c5419101a8b80738879, type: 3}
+  - {fileID: 8300000, guid: cb5a8b1ddf66e77419d48d2adccc31d7, type: 3}

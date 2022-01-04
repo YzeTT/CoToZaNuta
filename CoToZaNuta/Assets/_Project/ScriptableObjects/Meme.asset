@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f36a25b81042eb9409ec606a1bc14801, type: 3}
+  m_Name: Meme
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: d06b11d910e1ce54fbdc9b1f42332172, type: 3}
+  - {fileID: 8300000, guid: fa555f1180361694295ae61a9d4f7937, type: 3}
+  - {fileID: 8300000, guid: e57340d4c4376004591221052f9e979b, type: 3}
+  - {fileID: 8300000, guid: a361cdf3061c9664f94303a354b405bf, type: 3}
+  - {fileID: 8300000, guid: a6419bfe8d126114f9f7f8a1edb48e0c, type: 3}
+  - {fileID: 8300000, guid: f586aa3bbaefd8e4f92b75b9a6f7c501, type: 3}
