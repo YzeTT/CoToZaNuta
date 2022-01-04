@@ -6,4 +6,9 @@ using UnityEngine;
 public class Categories : ScriptableObject
 {
     [SerializeField] private List<CategorySongs> categories;
+
+    public List<CategorySongs> GetCategories()
+    {
+        return categories;
+    }
 }

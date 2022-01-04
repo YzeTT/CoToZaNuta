@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using Zenject;
 
 public class Timer : MonoBehaviour
 {
+    [Inject] private Categories categories;
+    
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI gameProgressText;
     [SerializeField] private GameObject logo;
@@ -15,12 +19,13 @@ public class Timer : MonoBehaviour
     public float gameTimer;
     public int currentSong;
 
-    public static UnityAction endOfTime;
+    public static UnityAction setAnswers;
     public static UnityAction showAnswers;
     public static UnityAction hideAnswers;
 
     private void Start()
     {
+        setAnswers?.Invoke();
         gameTimer = 15;
         currentSong = 1;
     }
@@ -47,7 +52,6 @@ public class Timer : MonoBehaviour
     {
         if (gameTimer < 0)
         {
-            endOfTime?.Invoke();
             ResetGameTimer();
         }
 
@@ -55,14 +59,17 @@ public class Timer : MonoBehaviour
         timerText.text = string.Format("{0}", seconds);
     }
 
-    private void ResetGameTimer()
+    private async void ResetGameTimer()
     {
+        gameTimer = 0;
+        await Task.Delay(3000);
         hideAnswers?.Invoke();
-
         logo.SetActive(true);
+        
         timerText.gameObject.transform.localPosition = new Vector3(0, -585, 0);
         timerText.fontSize = 320;
         gameTimer = 15;
+        setAnswers?.Invoke();
         currentSong += 1;
         gameProgressText.text = string.Format("{0}/10", currentSong);
     }
