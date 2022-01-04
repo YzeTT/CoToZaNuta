@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f36a25b81042eb9409ec606a1bc14801, type: 3}
+  m_Name: Stories
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 173defbe84047ab4589a04daec174720, type: 3}
+  - {fileID: 8300000, guid: 1034b2fa0ff94cc46a96f13444f4dd1c, type: 3}
+  - {fileID: 8300000, guid: 3910382fa901637468e659b63c84a9b1, type: 3}
+  - {fileID: 8300000, guid: d0f08f33cc0f0b444aba0b37c15743e9, type: 3}
+  - {fileID: 8300000, guid: 1fcf816496555bb40b241efe6b418f16, type: 3}
+  - {fileID: 8300000, guid: 358c024275bd40e4686e82ec29b92c56, type: 3}
