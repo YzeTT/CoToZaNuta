@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Events;
 using Zenject;
 
 public class AudioPlayer : MonoBehaviour
@@ -12,7 +8,9 @@ public class AudioPlayer : MonoBehaviour
     
     public AudioSource audioSource;
     
-    private void Start()
+    public static string currentSongName;
+    
+    private void Awake()
     {
         PlayCategorySongs(2);
     }
@@ -25,9 +23,9 @@ public class AudioPlayer : MonoBehaviour
         {
             audioSource.clip = audio;
             audioSource.Play();
+            currentSongName = audioSource.clip.name;
             await Task.Delay(18000);
         }
         
     }
-
 }

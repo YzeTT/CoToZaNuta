@@ -49,10 +49,13 @@ public class Answers : MonoBehaviour
         Random random = new Random();
         answers = answers.OrderBy(a => random.Next()).ToList();
         var songsInRandomOrder = categories.GetCategories()[2].GetAudioClips().OrderBy(a => random.Next()).ToList();
-
-        for (int i = 0; i < answers.Count; i++)
+        
+        answers[0].SetAnswerText(AudioPlayer.currentSongName);
+        
+        for (int i = 1; i < answers.Count; i++)
         {
             answers[i].SetAnswerText(songsInRandomOrder[i].name);
         }
+        
     }
 }

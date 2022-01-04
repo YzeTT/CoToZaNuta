@@ -9,6 +9,6 @@ public class GameController : MonoBehaviour
     [SerializeField] private Backgrounds backgrounds;
     [SerializeField] private Timer timer;
     [SerializeField] private Answers answers;
-    
-    
+
+    public static string correctAnswer;
 }
