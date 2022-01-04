@@ -1,44 +1,58 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
+using Zenject;
+using Random = System.Random;
 
 public class Answers : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> answersButtons = new List<GameObject>();
-
+    [Inject] private Categories categories;
+    [SerializeField] private List<Answer> answers = new List<Answer>();
 
     private void OnEnable()
     {
         Timer.showAnswers += ShowAnswers;
         Timer.hideAnswers += HideAnswers;
-    }
+        Timer.setAnswers += SetButtonText;
+    } 
 
     private void OnDisable()
     {
         Timer.showAnswers -= ShowAnswers;
         Timer.hideAnswers -= HideAnswers;
+        Timer.setAnswers -= SetButtonText;
     }
 
-    public List<GameObject> GetAnswersButtons()
+    public List<Answer> GetAnswersButtons()
     {
-        return answersButtons;
+        return answers;
     }
 
     public void ShowAnswers()
     {
-        foreach (var answer in answersButtons)
+        foreach (var answer in answers)
         {
-            answer.SetActive(true);
+            answer.gameObject.SetActive(true);
         }
     }
     
     public void HideAnswers()
     {
-        foreach (var answer in answersButtons)
+        foreach (var answer in answers)
         {
-            answer.SetActive(false);
+            answer.gameObject.SetActive(false);
+        }
+    }
+
+    private void SetButtonText()
+    {
+        Random random = new Random();
+        answers = answers.OrderBy(a => random.Next()).ToList();
+        var songsInRandomOrder = categories.GetCategories()[2].GetAudioClips().OrderBy(a => random.Next()).ToList();
+
+        for (int i = 0; i < answers.Count; i++)
+        {
+            answers[i].SetAnswerText(songsInRandomOrder[i].name);
         }
     }
 }
