@@ -21,6 +21,7 @@ public class AudioPlayer : MonoBehaviour
         
         foreach (var audio in audios)
         {
+            if (audioSource == null) return;
             audioSource.clip = audio;
             audioSource.Play();
             currentSongName = audioSource.clip.name;

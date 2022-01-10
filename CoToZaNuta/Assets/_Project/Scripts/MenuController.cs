@@ -1,12 +1,15 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using DG.Tweening;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
     [SerializeField] private GameObject logo;
     [SerializeField] private ButtonView playButton;
-    [SerializeField] private GameObject categoryPanel;
+    [SerializeField] private CategoryPanel categoryPanel;
 
     private void Start()
     {
@@ -26,14 +29,34 @@ public class MenuController : MonoBehaviour
         EnableCategoryPanel();
     }
     
-    private void EnableCategoryPanel()
+    private async void EnableCategoryPanel()
     {
-        categoryPanel.SetActive(true);
+        categoryPanel.gameObject.SetActive(true);
+
+        for (int i = 0; i < categoryPanel.GetCategoryButtons().Count; i++)
+        {
+            categoryPanel.GetCategoryButtons()[i].GetBackground().color = new Color(255,255,255,0);
+        }
+        
+        for (int i = 0; i < categoryPanel.GetCategoryButtons().Count; i++)
+        {
+            Sequence categoryPanelAnimation = DOTween.Sequence();
+            
+            categoryPanelAnimation.Append(categoryPanel.GetCategoryButtons()[i].GetBackground().DOFade(255, 800));
+
+            await Task.Delay(200);
+            categoryPanelAnimation.Play();
+        }
     }
 
     private void DisableCategoryPanel()
     {
-        categoryPanel.SetActive(false);
+        for (int i = 0; i < categoryPanel.GetCategoryButtons().Count; i++)
+        {
+            categoryPanel.GetCategoryButtons()[i].GetBackground().color = new Color(255,255,255,0);
+        }
+        
+        categoryPanel.gameObject.SetActive(false);
     }
 
     public async void MoveToSplashScreen()
@@ -43,4 +66,11 @@ public class MenuController : MonoBehaviour
         logo.SetActive(true);
         playButton.gameObject.SetActive(true);
     }
+
+    public void LoadGameScene()
+    {
+        SceneManager.LoadScene(1);
+    }
 }
+
+

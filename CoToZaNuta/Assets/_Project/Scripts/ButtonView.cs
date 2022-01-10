@@ -15,5 +15,9 @@ public class ButtonView : MonoBehaviour
     {
         button.onClick.AddListener(onClickAction);
     }
-    
+
+    public Image GetBackground()
+    {
+        return background;
+    }
 }
