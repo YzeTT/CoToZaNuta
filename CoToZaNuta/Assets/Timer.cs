@@ -32,6 +32,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(AudioPlayer.currentSongName);
         if (gameTimer > 0)
         {
             gameTimer -= Time.deltaTime;

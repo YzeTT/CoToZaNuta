@@ -14,7 +14,7 @@ public class Answers : MonoBehaviour
         Timer.showAnswers += ShowAnswers;
         Timer.hideAnswers += HideAnswers;
         Timer.setAnswers += SetButtonText;
-    } 
+    }
 
     private void OnDisable()
     {
@@ -28,15 +28,16 @@ public class Answers : MonoBehaviour
         return answers;
     }
 
-    public void ShowAnswers()
+
+    private void ShowAnswers()
     {
         foreach (var answer in answers)
         {
             answer.gameObject.SetActive(true);
         }
     }
-    
-    public void HideAnswers()
+
+    private void HideAnswers()
     {
         foreach (var answer in answers)
         {
@@ -46,16 +47,31 @@ public class Answers : MonoBehaviour
 
     private void SetButtonText()
     {
-        Random random = new Random();
+        var random = new Random();
         answers = answers.OrderBy(a => random.Next()).ToList();
         var songsInRandomOrder = categories.GetCategories()[2].GetAudioClips().OrderBy(a => random.Next()).ToList();
-        
-        answers[0].SetAnswerText(AudioPlayer.currentSongName);
-        
-        for (int i = 1; i < answers.Count; i++)
+
+        var titles = new List<string> {AudioPlayer.currentSongName};
+
+        var i = 0;
+        while (i != 3)
         {
-            answers[i].SetAnswerText(songsInRandomOrder[i].name);
+            if (titles.Contains(songsInRandomOrder[i].name))
+            {
+                i++;
+            }
+            else
+            {
+                titles.Add(songsInRandomOrder[i].name);
+            }
         }
-        
+
+        for (int j = 0; j < titles.Count; j++)
+        {
+            answers[j].SetAnswerText(titles[j]);
+            answers[j].SetNeutralAnswer();
+        }
+
+        titles.Clear();
     }
 }

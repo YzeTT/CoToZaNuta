@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbbfe42d8bfee6f45b8f8e7c08953dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neutralAnswer: {fileID: 0}
+  neutralAnswer: {fileID: 1189386776682215587}
   goodAnswer: {fileID: 930579953927177625}
   badAnswer: {fileID: 930579955159849693}
   answerText: {fileID: 4723442091617230752}

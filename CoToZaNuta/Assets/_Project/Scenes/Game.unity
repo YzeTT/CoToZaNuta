@@ -195,6 +195,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51637493}
   m_CullTransparentMesh: 0
+--- !u!1 &66525144 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1189386776682215587, guid: c4110da9e17cd5d44af249ceef4ab560,
+    type: 3}
+  m_PrefabInstance: {fileID: 799267367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &82534770
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +483,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329890078}
   m_CullTransparentMesh: 0
+--- !u!1 &410461201 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1189386776682215587, guid: c4110da9e17cd5d44af249ceef4ab560,
+    type: 3}
+  m_PrefabInstance: {fileID: 930579955190057316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &478785437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1048,7 @@ PrefabInstance:
         type: 3}
       propertyPath: neutralAnswer
       value: 
-      objectReference: {fileID: 1336119284}
+      objectReference: {fileID: 66525144}
     - target: {fileID: 4060813914278545581, guid: c4110da9e17cd5d44af249ceef4ab560,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1172,6 +1184,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbbfe42d8bfee6f45b8f8e7c08953dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &810674643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1189386776682215587, guid: c4110da9e17cd5d44af249ceef4ab560,
+    type: 3}
+  m_PrefabInstance: {fileID: 823380351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &823380351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1183,7 +1201,7 @@ PrefabInstance:
         type: 3}
       propertyPath: neutralAnswer
       value: 
-      objectReference: {fileID: 1233487768}
+      objectReference: {fileID: 810674643}
     - target: {fileID: 4060813914278545581, guid: c4110da9e17cd5d44af249ceef4ab560,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1808,12 +1826,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205649954}
   m_CullTransparentMesh: 0
---- !u!1 &1233487768 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4926814582454833117, guid: c4110da9e17cd5d44af249ceef4ab560,
-    type: 3}
-  m_PrefabInstance: {fileID: 823380351}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1327046948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1825,7 +1837,7 @@ PrefabInstance:
         type: 3}
       propertyPath: neutralAnswer
       value: 
-      objectReference: {fileID: 1683123320}
+      objectReference: {fileID: 1961652992}
     - target: {fileID: 4060813914278545581, guid: c4110da9e17cd5d44af249ceef4ab560,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2090,12 +2102,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &1336119284 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4926814582454833117, guid: c4110da9e17cd5d44af249ceef4ab560,
-    type: 3}
-  m_PrefabInstance: {fileID: 799267367}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1363278660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,12 +2414,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1683123320 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4926814582454833117, guid: c4110da9e17cd5d44af249ceef4ab560,
-    type: 3}
-  m_PrefabInstance: {fileID: 1327046948}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1720030813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,11 +2629,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758151265}
   m_CullTransparentMesh: 0
---- !u!1 &1999044049 stripped
+--- !u!1 &1961652992 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4926814582454833117, guid: c4110da9e17cd5d44af249ceef4ab560,
+  m_CorrespondingSourceObject: {fileID: 1189386776682215587, guid: c4110da9e17cd5d44af249ceef4ab560,
     type: 3}
-  m_PrefabInstance: {fileID: 930579955190057316}
+  m_PrefabInstance: {fileID: 1327046948}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &930579955190057316
 PrefabInstance:
@@ -2646,7 +2646,7 @@ PrefabInstance:
         type: 3}
       propertyPath: neutralAnswer
       value: 
-      objectReference: {fileID: 1999044049}
+      objectReference: {fileID: 410461201}
     - target: {fileID: 4060813914278545581, guid: c4110da9e17cd5d44af249ceef4ab560,
         type: 3}
       propertyPath: m_LocalPosition.x
