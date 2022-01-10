@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
@@ -30,8 +31,14 @@ public class LogoAnimation : MonoBehaviour
 
             notesAnimation.SetLoops(-1);
 
-            await Task.Delay(200);
+            await Task.Delay(100);
             notesAnimation.Play();
         }
     }
+
+    public void StopAnimations()
+    {
+        DOTween.KillAll();
+    }
+
 }
