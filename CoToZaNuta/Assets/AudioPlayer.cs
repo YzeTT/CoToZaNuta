@@ -41,18 +41,17 @@ public class AudioPlayer : MonoBehaviour
                 randomTenAudios.Add(allAudios[randomIndex]);
             }
         }
-        
+
         foreach (var audio in randomTenAudios)
         {
             if (audioSource == null) return;
             audioSource.clip = audio;
             audioSource.Play();
             currentSongName = audioSource.clip.name;
-            await Task.Delay(18000);
+            await Task.Delay(12000);
             note.transform.localPosition += new Vector3(96, 0, 0);
         }
 
         randomTenAudios.Clear();
     }
-    
 }

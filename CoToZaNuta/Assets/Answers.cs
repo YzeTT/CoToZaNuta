@@ -54,7 +54,7 @@ public class Answers : MonoBehaviour
         var titles = new List<string> {AudioPlayer.currentSongName};
 
         var i = 0;
-        while (i != 3)
+        while (titles.Count != 4)
         {
             if (titles.Contains(songsInRandomOrder[i].name))
             {
@@ -69,7 +69,11 @@ public class Answers : MonoBehaviour
         for (int j = 0; j < titles.Count; j++)
         {
             answers[j].SetAnswerText(titles[j]);
-            answers[j].SetNeutralAnswer();
+        }
+
+        foreach (var answer in answers)
+        {
+            answer.SetNeutralAnswer();
         }
 
         titles.Clear();

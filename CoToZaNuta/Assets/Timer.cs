@@ -25,14 +25,15 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        setAnswers?.Invoke();
-        gameTimer = 15;
         currentSong = 1;
+        ResetGameTimer(9);
+        setAnswers?.Invoke();
+
+        Debug.Log(currentSong + AudioPlayer.currentSongName);
     }
 
     void Update()
     {
-        Debug.Log(AudioPlayer.currentSongName);
         if (gameTimer > 0)
         {
             gameTimer -= Time.deltaTime;
@@ -40,13 +41,17 @@ public class Timer : MonoBehaviour
 
         if (gameTimer < 7)
         {
-            showAnswers?.Invoke();
+            if (currentSong < 11)
+            {
+                showAnswers?.Invoke();
+            }
+
             logo.SetActive(false);
             timerText.fontSize = 148;
             timerText.gameObject.transform.localPosition = Vector3.zero;
         }
 
-        if (currentSong < 10)
+        if (currentSong < 11)
         {
             DisplayTime(gameTimer);
         }
@@ -63,6 +68,11 @@ public class Timer : MonoBehaviour
         timerText.text = string.Format("{0}", seconds);
     }
 
+    private void ResetGameTimer(int time)
+    {
+        gameTimer = time;
+    }
+
     private async void ResetGameTimer()
     {
         gameTimer = 0;
@@ -72,9 +82,10 @@ public class Timer : MonoBehaviour
 
         timerText.gameObject.transform.localPosition = new Vector3(0, -585, 0);
         timerText.fontSize = 320;
-        gameTimer = 15;
+        ResetGameTimer(9);
         setAnswers?.Invoke();
         currentSong += 1;
+        Debug.Log(currentSong.ToString() + AudioPlayer.currentSongName);
         gameProgressText.text = string.Format("{0}/10", currentSong);
     }
 }
