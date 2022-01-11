@@ -13,7 +13,14 @@ MonoBehaviour:
   m_Name: HipHop
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: f3eded2d2388874459742fcdf6f21d1b, type: 3}
-  - {fileID: 8300000, guid: ae735226eeddffa4da9880ce95935d6d, type: 3}
-  - {fileID: 8300000, guid: e08cc84c6d6a7c5419101a8b80738879, type: 3}
+  - {fileID: 8300000, guid: 6d98846300e1cf6408ade5343502ee25, type: 3}
+  - {fileID: 8300000, guid: 3e1e6bd04a6f97042ac84bc2fb1dd52b, type: 3}
+  - {fileID: 8300000, guid: 245005c2d4f1e45459e03395f8815bd3, type: 3}
   - {fileID: 8300000, guid: cb5a8b1ddf66e77419d48d2adccc31d7, type: 3}
+  - {fileID: 8300000, guid: f3eded2d2388874459742fcdf6f21d1b, type: 3}
+  - {fileID: 8300000, guid: b37e7e2273206a3498c6c8a1d0ab715c, type: 3}
+  - {fileID: 8300000, guid: c2d2759572f12bd4894a6765a8649d3f, type: 3}
+  - {fileID: 8300000, guid: e08cc84c6d6a7c5419101a8b80738879, type: 3}
+  - {fileID: 8300000, guid: ae735226eeddffa4da9880ce95935d6d, type: 3}
+  - {fileID: 8300000, guid: 04570ee254e03e743a20694f50b4d25c, type: 3}
+  - {fileID: 8300000, guid: b67e9329d2db8ba469d09705d2e710fc, type: 3}

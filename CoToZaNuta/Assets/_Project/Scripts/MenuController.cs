@@ -11,6 +11,8 @@ public class MenuController : MonoBehaviour
     [SerializeField] private ButtonView playButton;
     [SerializeField] private CategoryPanel categoryPanel;
 
+    public static int currentCategory = 4;
+    
     private void Start()
     {
         InitPlayButton();
@@ -65,6 +67,11 @@ public class MenuController : MonoBehaviour
         await Task.Delay(40);
         logo.SetActive(true);
         playButton.gameObject.SetActive(true);
+    }
+    
+    public void ChangeCategory(int number)
+    {
+        currentCategory = number;
     }
 
     public void LoadGameScene()

@@ -11,7 +11,7 @@ using Zenject;
 public class Timer : MonoBehaviour
 {
     [Inject] private Categories categories;
-    
+
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI gameProgressText;
     [SerializeField] private GameObject logo;
@@ -46,7 +46,10 @@ public class Timer : MonoBehaviour
             timerText.gameObject.transform.localPosition = Vector3.zero;
         }
 
-        DisplayTime(gameTimer);
+        if (currentSong < 10)
+        {
+            DisplayTime(gameTimer);
+        }
     }
 
     private void DisplayTime(float timeToDisplay)
@@ -66,7 +69,7 @@ public class Timer : MonoBehaviour
         await Task.Delay(3000);
         hideAnswers?.Invoke();
         logo.SetActive(true);
-        
+
         timerText.gameObject.transform.localPosition = new Vector3(0, -585, 0);
         timerText.fontSize = 320;
         gameTimer = 15;

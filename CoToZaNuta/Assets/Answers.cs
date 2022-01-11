@@ -49,7 +49,7 @@ public class Answers : MonoBehaviour
     {
         var random = new Random();
         answers = answers.OrderBy(a => random.Next()).ToList();
-        var songsInRandomOrder = categories.GetCategories()[2].GetAudioClips().OrderBy(a => random.Next()).ToList();
+        var songsInRandomOrder = categories.GetCategories()[MenuController.currentCategory].GetAudioClips().OrderBy(a => random.Next()).ToList();
 
         var titles = new List<string> {AudioPlayer.currentSongName};
 

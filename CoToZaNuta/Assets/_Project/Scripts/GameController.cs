@@ -10,5 +10,5 @@ public class GameController : MonoBehaviour
     [SerializeField] private Timer timer;
     [SerializeField] private Answers answers;
 
-    public static string correctAnswer;
+    public static bool isGameOver;
 }
