@@ -6,7 +6,7 @@ public class Backgrounds : MonoBehaviour
 {
     [SerializeField] private List<GameObject> backgrounds = new List<GameObject>();
     
-    public List<GameObject> GetAnswersButtons()
+    public List<GameObject> GetBackgrounds()
     {
         return backgrounds;
     }

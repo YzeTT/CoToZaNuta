@@ -13,9 +13,14 @@ MonoBehaviour:
   m_Name: Meme
   m_EditorClassIdentifier: 
   audioClips:
+  - {fileID: 8300000, guid: f586aa3bbaefd8e4f92b75b9a6f7c501, type: 3}
+  - {fileID: 8300000, guid: e57340d4c4376004591221052f9e979b, type: 3}
   - {fileID: 8300000, guid: d06b11d910e1ce54fbdc9b1f42332172, type: 3}
   - {fileID: 8300000, guid: fa555f1180361694295ae61a9d4f7937, type: 3}
-  - {fileID: 8300000, guid: e57340d4c4376004591221052f9e979b, type: 3}
+  - {fileID: 8300000, guid: 85a339637828d324cbd75259ddf1f7f3, type: 3}
   - {fileID: 8300000, guid: a361cdf3061c9664f94303a354b405bf, type: 3}
   - {fileID: 8300000, guid: a6419bfe8d126114f9f7f8a1edb48e0c, type: 3}
-  - {fileID: 8300000, guid: f586aa3bbaefd8e4f92b75b9a6f7c501, type: 3}
+  - {fileID: 8300000, guid: ef818c35d5bbad94f851038c178aa0db, type: 3}
+  - {fileID: 8300000, guid: 21b51524422238b40810a0869ac3ebb4, type: 3}
+  - {fileID: 8300000, guid: f2a3ed1752f57d147ba6114d8110d049, type: 3}
+  - {fileID: 8300000, guid: 0c53be9330ca0284ab308a55393e1bd7, type: 3}
