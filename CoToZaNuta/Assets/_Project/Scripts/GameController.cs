@@ -12,6 +12,11 @@ public class GameController : MonoBehaviour
 
     public static bool isGameOver;
 
+    private void Start()
+    {
+        SetCategoryBackground(MenuController.currentCategory);
+    }
+
     private void SetCategoryBackground(int category)
     {
         foreach (var bg in backgrounds.GetBackgrounds())

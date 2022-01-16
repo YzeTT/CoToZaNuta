@@ -13,14 +13,14 @@ public class Answers : MonoBehaviour
     {
         Timer.showAnswers += ShowAnswers;
         Timer.hideAnswers += HideAnswers;
-        Timer.setAnswers += SetButtonText;
+        AudioPlayer.setAnswers += SetButtonText;
     }
 
     private void OnDisable()
     {
         Timer.showAnswers -= ShowAnswers;
         Timer.hideAnswers -= HideAnswers;
-        Timer.setAnswers -= SetButtonText;
+        AudioPlayer.setAnswers -= SetButtonText;
     }
 
     public List<Answer> GetAnswersButtons()

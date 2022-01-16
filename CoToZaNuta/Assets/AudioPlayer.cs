@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 using Zenject;
 using Random = System.Random;
 
@@ -12,11 +13,14 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] private GameObject note;
 
     public AudioSource audioSource;
+    
+    public static UnityAction setAnswers;
 
     public static string currentSongName;
 
-    private void Awake()
+    private async void Awake()
     {
+        await Task.Delay(1000);
         note.transform.localPosition = new Vector3(-422, 29, 0);
         PlayCategorySongs(MenuController.currentCategory);
     }
@@ -46,9 +50,10 @@ public class AudioPlayer : MonoBehaviour
         {
             if (audioSource == null) return;
             audioSource.clip = audio;
-            audioSource.Play();
             currentSongName = audioSource.clip.name;
-            await Task.Delay(12000);
+            audioSource.Play();
+            setAnswers?.Invoke();
+            await Task.Delay(18000);
             note.transform.localPosition += new Vector3(96, 0, 0);
         }
 
